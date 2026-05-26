@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanjana Portfolio</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:#0f172a;
+      color:white;
+    }
+
+    /* NAVBAR */
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 60px;
+      background:#111827;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav h1{
+      color:#38bdf8;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#38bdf8;
+    }
+
+    /* HERO SECTION */
+
+    .hero{
+      height:100vh;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    .hero img{
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      border:5px solid #38bdf8;
+      margin-bottom:20px;
+    }
+
+    .hero h2{
+      font-size:50px;
+      margin-bottom:10px;
+    }
+
+    .hero h3{
+      color:#38bdf8;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:700px;
+      line-height:1.7;
+      margin-bottom:25px;
+    }
+
+    .btn{
+      padding:12px 25px;
+      border:none;
+      background:#38bdf8;
+      color:white;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:16px;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#0284c7;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:80px 60px;
+    }
+
+    .title{
+      text-align:center;
+      font-size:40px;
+      margin-bottom:40px;
+      color:#38bdf8;
+    }
+
+    /* ABOUT */
+
+    .about{
+      text-align:center;
+      line-height:1.8;
+      max-width:900px;
+      margin:auto;
+    }
+
+    /* SKILLS */
+
+    .skills-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:20px;
+    }
+
+    .skill{
+      background:#1e293b;
+      padding:25px;
+      border-radius:10px;
+      text-align:center;
+      transition:0.3s;
+    }
+
+    .skill:hover{
+      transform:translateY(-5px);
+      background:#334155;
+    }
+
+    /* PROJECTS */
+
+    .projects-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:25px;
+    }
+
+    .project{
+      background:#1e293b;
+      border-radius:12px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .project:hover{
+      transform:scale(1.03);
+    }
+
+    .project img{
+      width:100%;
+      height:200px;
+      object-fit:cover;
+    }
+
+    .project-content{
+      padding:20px;
+    }
+
+    .project-content h3{
+      margin-bottom:10px;
+      color:#38bdf8;
+    }
+
+    .project-content p{
+      margin-bottom:15px;
+      line-height:1.6;
+    }
+
+    /* VIDEO */
+
+    .video-section{
+      text-align:center;
+    }
+
+    iframe{
+      width:80%;
+      height:450px;
+      border:none;
+      border-radius:10px;
+    }
+
+    /* CONTACT */
+
+    .contact-form{
+      max-width:600px;
+      margin:auto;
+      display:flex;
+      flex-direction:column;
+      gap:20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      padding:15px;
+      border:none;
+      border-radius:8px;
+      font-size:16px;
+    }
+
+    .contact-form textarea{
+      height:150px;
+    }
+
+    /* FOOTER */
+
+    footer{
+      background:#111827;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      .hero h2{
+        font-size:35px;
+      }
+
+      iframe{
+        width:100%;
+        height:250px;
+      }
+
+      section{
+        padding:60px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <h1>Sanjana Portfolio</h1>
+
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#video">Video</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+
+  <section class="hero" id="home">
+
+    <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="profile">
+
+    <h2>Hi, I'm Sanjana 👋</h2>
+
+    <h3>Full Stack Developer | AI Enthusiast</h3>
+
+    <p>
+      I build modern websites, AI applications,
+      Machine Learning projects, and full-stack applications
+      using React, Node.js, MongoDB, and Python.
+    </p>
+
+    <button class="btn">Download Resume</button>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section id="about">
+
+    <h2 class="title">About Me</h2>
+
+    <div class="about">
+
+      <p>
+        I am a passionate Full Stack Developer interested in
+        Artificial Intelligence, Web Development, and
+        Machine Learning. I enjoy building innovative projects
+        that solve real-world problems.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <h2 class="title">Skills</h2>
+
+    <div class="skills-container">
+
+      <div class="skill">HTML5</div>
+      <div class="skill">CSS3</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">React.js</div>
+      <div class="skill">Node.js</div>
+      <div class="skill">MongoDB</div>
+      <div class="skill">Python</div>
+      <div class="skill">Machine Learning</div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section id="projects">
+
+    <h2 class="title">Projects</h2>
+
+    <div class="projects-container">
+
+      <div class="project">
+
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="">
+
+        <div class="project-content">
+
+          <h3>AI Fake News Detector</h3>
+
+          <p>
+            Detect fake news using NLP and Machine Learning.
+          </p>
+
+          <button class="btn">GitHub</button>
+
+        </div>
+
+      </div>
+
+      <div class="project">
+
+        <img src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b" alt="">
+
+        <div class="project-content">
+
+          <h3>Smart Waste Management</h3>
+
+          <p>
+            AI-powered waste detection and monitoring system.
+          </p>
+
+          <button class="btn">GitHub</button>
+
+        </div>
+
+      </div>
+
+      <div class="project">
+
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+
+        <div class="project-content">
+
+          <h3>Portfolio Website</h3>
+
+          <p>
+            Responsive personal portfolio website using Full Stack technologies.
+          </p>
+
+          <button class="btn">GitHub</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- VIDEO SECTION -->
+
+  <section id="video" class="video-section">
+
+    <h2 class="title">Project Demo Video</h2>
+
+    <iframe
+      src="https://www.youtube.com/embed/dGcsHMXbSOA"
+      allowfullscreen>
+    </iframe>
+
+  </section>
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <h2 class="title">Contact Me</h2>
+
+    <form class="contact-form">
+
+      <input type="text" placeholder="Your Name">
+
+      <input type="email" placeholder="Your Email">
+
+      <textarea placeholder="Your Message"></textarea>
+
+      <button class="btn">Send Message</button>
+
+    </form>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Sanjana Portfolio | All Rights Reserved
+    </p>
+
+  </footer>
+
+</body>
+</html>
